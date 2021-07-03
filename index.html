@@ -6,158 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
-    <link rel="stylesheet" href="app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app(1).css">
 </head>
 
 <body>
-    <main>
-        <div id="content">
-            <section id="title">
-                <h1>Gaming Survey</h1>
-                <p id="description">Please answer this quick survey regarding gaming.</p>
-            </section>
-            <form action="/form" id="survey-form">
-                <fieldset>
-                    <legend>Personal Information</legend>
-                    <ul id="personal">
-                        <li>
-                            <label for="name" id="name-label">Name</label>
-                            <input type="text" id="name" name="user-name" placeholder="Enter name" maxlength="50">
-                        </li>
-                        <li>
-                            <label for="email" id="email-label">E-mail</label>
-                            <input type="email" id="email" name="user-mail" placeholder="Enter e-mail">
-                        </li>
-                        <li>
-                            <label for="age" id="age-label">Date of Birth</label>
-                            <input type="date" id="age" name="user-dob">
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset>
-                    <legend>Playtime Information</legend>
-                    <p>Please answer the following questions about your playtime habits.</p>
-                    <hr>
-                    <p>How many hours do you play games?</p>
-                    <ul id="play-section">
-                        <li>
-                            <label for="number" id="number">Per month</label>
-                            <input type="number" name="hours-day" id="number" min="0" max="24"
-                                placeholder="Hours per day">
-                        </li>
-                        <li>
-                            <label for="weekly" id="week-label">Per year</label>
-                            <input type="number" id="weekly" name="hours-week" min="0" max="168"
-                                placeholder="Hours per week">
-                        </li>
-                    </ul>
-                    <hr>
-                    <p>Overall, do you think you're gameplay habits are:</p>
-                    <ul id="play-rate">
-                        <li>
-                            <label for="1" class="radio"><input type="radio" id="1" name="overall" value="1"
-                                    class="game-radio" checked> 1 - (below average)</label>
-                        </li>
-                        <li>
-                            <label for="2" class="radio"><input type="radio" id="2" name="overall" value="2"
-                                    class="game-radio"> 2 - (slightly below average)</label>
-                        </li>
-                        <li>
-                            <label for="3" class="radio"><input type="radio" id="3" name="overall" value="3"
-                                    class="game-radio"> 3 -
-                                (average)</label>
-                        </li>
-                        <li>
-                            <label for="4" class="radio"><input type="radio" id="4" name="overall" value="4"
-                                    class="game-radio"> 4 - (slightly
-                                above average)</label>
-                        </li>
-                        <li>
-                            <label for="5" class="radio"><input type="radio" id="5" name="overall" value="5"
-                                    class="game-radio"> 5 - (above
-                                average)</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset>
-                    <legend id="games-legend">Types of Games Played</legend>
-                    <p>Please answer the multi-choice selection of answers of game genres you play.</p>
-                    <hr>
-                    <ul id="games">
-                        <li>
-                            <label for="action-adventure"><input type="checkbox" name="action-adventure"
-                                    id="action-adventure" value="action-adventure"> Action/Adventure</label>
-                        </li>
-                        <li>
-                            <label for="roleplay"> <input type="checkbox" name="roleplay" id="roleplay"
-                                    value="roleplay"> Role Playing Game</label>
-                        </li>
-                        <li>
-                            <label for="strategy"><input type="checkbox" name="strategy" id="strategy" value="strategy">
-                                Strategy</label>
-                        </li>
-                        <li>
-                            <label for="puzzle"><input type="checkbox" name="puzzle" id="puzzle" value="puzzle"> Puzzle
-                                Games</label>
-                        </li>
-                        <li>
-                            <label for="mmorpg"><input type="checkbox" name="mmorpg" id="mmorpg" value="mmorpg">
-                                MMORPG</label>
-                        </li>
-                        <li>
-                            <label for="survival"><input type="checkbox" name="survival" id="survival" value="survival">
-                                Survival</label>
-                        </li>
-                        <li>
-                            <label for="platformer"><input type="checkbox" name="platformer" id="platformer"
-                                    value="platformer"> Platformer</label>
-                        </li>
-                        <li>
-                            <label for="open-world"><input type="checkbox" name="open-world" id="open-world"
-                                    value="open-world"> Open World</label>
-                        </li>
-                        <li>
-                            <label for="jrpg"><input type="checkbox" name="jrpg" id="jrpg" value="jrpg"> J-RPG</label>
-                        </li>
-                        <li>
-                            <label for="base-build"><input type="checkbox" name="base-build" id="base-build"
-                                    value="base-build"> Base Builder</label>
-                        </li>
-                    </ul>
-                    <hr>
-                    <p>From the drop-down list, please select you're favorite genre.</p>
-                    <label for="favorite" id="favorites">Choost a favorite genre</label>
-                    <section id="feedback">
-                        <select name="genres" id="drop-down">
-                            <option value=" ">--Select genre--</option>
-                            <option value="action-adventure">Action Adventure</option>
-                            <option value="roleplay">Role Playing</option>
-                            <option value="strategy">Strategy</option>
-                            <option value="puzzle">Puzzle</option>
-                            <option value="mmorpg">MMORPG</option>
-                            <option value="survival">Survival</option>
-                            <option value="platformer">Platformer</option>
-                            <option value="open-world">Open World</option>
-                            <option value="jrpg">J-RPG</option>
-                            <option value="base-build">Base Builder</option>
-                        </select>
-                    </section>
-                </fieldset>
-                <fieldset>
-                    <legend>Final Feedback</legend>
-                    <section id="final-feed">
-                        <p>Please list any further comments or concerns in the field below.</p>
-                        <textarea name="comment" id="comment" cols="24" rows="5"
-                            placeholder="Write your comment here"></textarea>
-                        <button type="submit" id="submit">Submit Form</button>
-                    </section>
-                </fieldset>
-            </form>
-        </div>
-    </main>
-</body>
+    <header>
+        <h1 id="title">Video Game Habits Survey</h1>
+        <p id="description">Please fill out this brief survey to let us know you gaming habits and preferences of
+            different
+            game genres.</p>
+    </header>
 
-</html>
+    <div id="content">
+
+        <form id="survey-form">
+
+            <section id="personal">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" placeholder="Enter name" required>
+                <label for="email" id="email-label">E-mail</label>
+                <input type="email" id="email" placeholder="Enter e-mail" required>
+                <label for="number" id="number-label">Number</label>
+                <input type="number" id="number" min="0" max="120" placeholder="Enter age (optional)">
+            </section>
+
+            <section id="favorite">
+                <select name="fav-genre" id="dropdown">
+                    <option value="null">---Choose an option---</option>
+                    <option value="strategy">Strategy</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="action">Action</option>
+                    <option value="roleplay">Roleplaying</option>
+                    <option value="simulation">Simulation</option>
+                    <option value="puzzle">Puzzle</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="mmo">MMORPG</option>
+                    <option value="platformer">Platformer</option>
+                    <option value="retro">Retro</option>
+                    <option value="indie">Indie</option>
+                    <option value="racing">Racing</option>
+                    <option value="rts">Real-time Strategy</option>
+                </select>
+            </section>
+
+            <section id="play-habits">
+                <input type="radio" id="bel-avg" name="playtime" value="bel-avg">
+                <input type="radio" id="slt-bel" name="playtime" value="slt-bel">
+                <input type="radio" id="avg" name="playtime" value="avg">
+                <input type="radio" id="slt-abv" name="playtime" value="slt-abv">
+                <input type="radio" id="abv-avg" name="playtime" value="abv-avg">
+            </section>
+
+            <section id="game-type">
+                <input type="checkbox" id="genre" value="strategy">
+                <input type="checkbox" id="genre" value="adventure">
+                <input type="checkbox" id="genre" value="action">
+                <input type="checkbox" id="genre" value="roleplay">
+                <input type="checkbox" id="genre" value="simulation">
+                <input type="checkbox" id="genre" value="puzzle">
+                <input type="checkbox" id="genre" value="shooter">
+                <input type="checkbox" id="genre" value="mmo">
+                <input type="checkbox" id="genre" value="platformer">
+                <input type="checkbox" id="genre" value="retro">
+                <input type="checkbox" id="genre" value="indie">
+                <input type="checkbox" id="genre" value="racing">
+                <input type="checkbox" id="genre" value="rts">
+            </section>
+
+            <section id="comment-section">
+                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+
+                <section id="send">
+                    <button id="submit">Submit Survey</button>
+                </section>
+        </form>
+    </div>
+</body>
