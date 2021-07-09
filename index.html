@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
-    <link rel="stylesheet" href="app(1).css">
+    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
     <header>
-        <h1 id="title">Video Game Habits Survey</h1>
+        <h1 id="title">Video <span id="head-span">Game Habits</span> Survey</h1>
+        <img src="images/012-gameboy.png" id="gameboy" alt="Vector image of a handheld game system.">
         <p id="description">Please fill out this brief survey to let us know you gaming habits and preferences of
             different
             game genres.</p>
@@ -21,16 +22,85 @@
 
         <form id="survey-form">
 
+            <img src="images/042-tetris.png" id="tetris" alt="Tetris block graphic.">
+
+            <h2 id="personal-head">Personal Info</h2>
+
             <section id="personal">
                 <label for="name" id="name-label">Name</label>
-                <input type="text" id="name" placeholder="Enter name" required>
+                <input type="text" id="name" placeholder="E.g. Roger Smith..." required>
                 <label for="email" id="email-label">E-mail</label>
-                <input type="email" id="email" placeholder="Enter e-mail" required>
-                <label for="number" id="number-label">Number</label>
-                <input type="number" id="number" min="0" max="120" placeholder="Enter age (optional)">
+                <input type="email" id="email" placeholder="E.g. RogerSmith@gmail.com" required>
+                <label for="number" id="number-label">Age (optional)</label>
+                <input type="number" id="number" min="0" max="120" placeholder="Enter your age">
+            </section>
+
+            <section id="game-type">
+                <img src="images/003-podium.png" id="podium" alt="A graphic of a winner's podium.">
+
+                <h2 id="game-type-head">Game Types</h2>
+                <p class="gray-para">Please select any game genres that you are interested in.</p>
+
+                <ul>
+                    <li>
+                        <input type="checkbox" id="strategy" value="strategy">
+                        <label for="strategy">Strategy</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="adventure" value="adventure">
+                        <label for="adventure">Adventure</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="action" value="action">
+                        <label for="action">Action</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="roleplay" value="roleplay">
+                        <label for="roleplay">Roleplaying</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="simulation" value="simulation">
+                        <label for="simulation">Simulation</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="puzzle" value="puzzle">
+                        <label for="puzzle">Puzzle</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="shooter" value="shooter">
+                        <label for="shooter">Shooter</label>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="mmo" value="mmo">
+                        <label for="mmo">MMORPG</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="platformer" value="platformer">
+                        <label for="platformer">Platformer</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="retro" value="retro">
+                        <label for="retro">Retro</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="indie" value="indie">
+                        <label for="indie">Indie</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="racing" value="racing">
+                        <label for="racing">Racing</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="rts" value="rts">
+                        <label for="rts">Real-time Strategy</label>
+                    </li>
+                </ul>
             </section>
 
             <section id="favorite">
+                <p class="gray-para">Please select your favorite genre from the list below.</p>
                 <select name="fav-genre" id="dropdown">
                     <option value="null">---Choose an option---</option>
                     <option value="strategy">Strategy</option>
@@ -50,35 +120,57 @@
             </section>
 
             <section id="play-habits">
-                <input type="radio" id="bel-avg" name="playtime" value="bel-avg">
-                <input type="radio" id="slt-bel" name="playtime" value="slt-bel">
-                <input type="radio" id="avg" name="playtime" value="avg">
-                <input type="radio" id="slt-abv" name="playtime" value="slt-abv">
-                <input type="radio" id="abv-avg" name="playtime" value="abv-avg">
+                <img src="images/036-puzzle.png" id="puzzle-pic" alt="Multicolored puzzle piece graphic.">
+                <h2 id="habit-head">Gaming Habits</h2>
+                <p class="gray-para">Please answer the following series of questions about your play habits.</p>
+                <hr>
+
+                <p class="questions">How many hours a day, on average do you play games?</p>
+                <input type="number" min="0" max="24" id="hours-day" placeholder="E.x. 4" required>
+
+                <p class="questions">How many hours a week, on average do you play games?</p>
+                <input type="number" min="0" max="168" id="hours-week" placeholder="E.x. 4" required>
+
+                <p class="questions">Based on your average time spent playing games, how would rate your gameplay habits
+                    from a scale of 1 to 5?</p>
+                <ul id="radio-habits">
+                    <li>
+                        <input type="radio" id="bel-avg" name="playtime" value="bel-avg">
+                        <label for="bel-avg">1 - Below average</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="slt-bel" name="playtime" value="slt-bel">
+                        <label for="slt-bel">2 - Slighty below average</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="avg" name="playtime" value="avg">
+                        <label for="avg">3 - Average</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="slt-abv" name="playtime" value="slt-abv">
+                        <label for="slt-abv">4 - Slightly above average</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="abv-avg" name="playtime" value="abv-avg">
+                        <label for="abv-avg">5 - Above average</label>
+                    </li>
+                </ul>
             </section>
 
-            <section id="game-type">
-                <input type="checkbox" id="genre" value="strategy">
-                <input type="checkbox" id="genre" value="adventure">
-                <input type="checkbox" id="genre" value="action">
-                <input type="checkbox" id="genre" value="roleplay">
-                <input type="checkbox" id="genre" value="simulation">
-                <input type="checkbox" id="genre" value="puzzle">
-                <input type="checkbox" id="genre" value="shooter">
-                <input type="checkbox" id="genre" value="mmo">
-                <input type="checkbox" id="genre" value="platformer">
-                <input type="checkbox" id="genre" value="retro">
-                <input type="checkbox" id="genre" value="indie">
-                <input type="checkbox" id="genre" value="racing">
-                <input type="checkbox" id="genre" value="rts">
+            <section id="comment-head">
+                <img src="images/044-treasure.png" id="chest" alt="A treasure chest graphic.">
+                <h2>Comments</h2>
             </section>
 
-            <section id="comment-section">
-                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            <section id="comment-box">
+                <textarea name="comments" id="comments" rows="10" placeholder="Write any comments here..."></textarea>
+            </section>
 
-                <section id="send">
-                    <button id="submit">Submit Survey</button>
-                </section>
+            <section id="send">
+                <button id="submit">Submit Survey</button>
+            </section>
         </form>
     </div>
+    <div id="attributed">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 </body>
